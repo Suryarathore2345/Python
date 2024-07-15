@@ -1,0 +1,13 @@
+
+import pandas
+db=pandas.read_csv("marks.txt")
+db
+y = db['marks']
+x = db['hrs']
+x = x.values.reshape(-1,1)
+ x
+from sklearn.linear_model import LinearRegression
+mind=LinearRegression()
+mind.fit(x,y)
+mind.predict([[9.2]])
+.
